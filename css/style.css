@@ -8,13 +8,9 @@ body {
     height: 100vh;
 }
 
-::selection {
-    background-color: yellow;
-}
-
 .cursor{
-    height: 6vh;
-    width: 6vh;
+    height: 3vh;
+    width: 3vh;
     background-color: white;
     mix-blend-mode: difference;
     border-radius: 100%;
@@ -22,7 +18,7 @@ body {
     pointer-events: none;
     z-index:99;
     transform: translate(-50%,-50%);
-    transition-duration: .2s;
+    transition-duration: 0s;
     transition-timing-function: ease-out;
     animation: cursorAnimation .5s infinite alternate;
     
@@ -34,7 +30,7 @@ body {
         transform: scale(1);
     }
     to {
-        transform: scale(.7);
+        transform: scale(0.8);
     }
 }
 
@@ -113,18 +109,6 @@ body {
     color:none;
     z-index: -1;
     
-}
-a:hover::before{
-    content: '';
-    display: block;
-    position:absolute;
-    overflow:hidden;
-    width: 3rem;
-    height: 1rem;
-    background-size: 50% auto;
-    background-color:yellow;
-    float: right;
-    transform: skew(-20deg);
 }
 
 @keyframes animate{
